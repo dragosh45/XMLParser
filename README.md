@@ -1,4 +1,6 @@
 # XMLParser
+Small project involving XML file transformation. Creates output XML file from input XML files.
+
 XML Parser Project problem.  Problem info in the following doc:
 [XML Parser problem.pdf](https://github.com/dragosh45/XMLParser/files/10473037/XML.Parser.problem.pdf)
 
