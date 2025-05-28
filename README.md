@@ -1,28 +1,75 @@
-# XMLParser
-Small project involving XML file transformation. Creates output XML file from input XML files.
-
-XML Parser Project problem.  Problem info in the following doc:
+📦 XMLParser
+This is a small Java project designed to transform XML files representing orders into output XMLs representing products. It demonstrates the use of Java's built-in XML processing libraries (javax.xml, org.w3c.dom) for parsing and transformation tasks.
+More Problem info in the following doc:
 [XML Parser problem.pdf](https://github.com/dragosh45/XMLParser/files/10473037/XML.Parser.problem.pdf)
 
-Solution description:
+✅ Features
+Parses input order XMLs (e.g., OrderInput.xml, OrderInput2.xml)
 
-1. The program will create Product Java Objects from the Order.xml file
-2. Then it will generate Product.xml files from the Objects
-3. A continuous loop runs reading new XML files and deleting XML files after they are processed
+Converts data into Product Java objects
 
--it uses javax.xml and org.w3c.dom libraries to parse and transform
+Generates structured XML files based on the extracted order data
 
-How to use:
+Automatically watches a directory for new XML files to process
 
-1.Open project with IntelliJ 
-2.Modify path for input and output XMLs 
-    -modify String inputXMLPath in Main.java
-    -modify String outputXMLPath in Main.java
-3.Run the program from Main class
-4.Copy XML files from the /src in the /inputXML
-   -the OrderInput.xml is the original XML file
-   -the OrderInput2.xml and OrderInput3.xml have small modifications like order number and    supplier name
-    -can copy and paste files 1 by one in order to reflect the problem use case
-5.Right click on the project name directory and left click Reload From Disk 
-6.Product XML files will appear in the outputXML
+Deletes input files after successful processing
 
+Modular, extensible design using standard Java libraries
+
+📂 Folder Structure
+graphql
+Copy
+Edit
+XMLParser/
+├── inputXML/       # Drop your input XML files here
+├── outputXML/      # Processed XMLs are generated here
+├── src/
+│   ├── Main.java   # Entry point - contains paths to be adjusted
+│   └── ...         # Supporting classes (e.g., parser, model)
+└── XML Parser problem.pdf  # Project problem statement
+🔧 Technologies Used
+Java 8+
+
+javax.xml.parsers & org.w3c.dom
+
+Standard Java I/O
+
+IntelliJ IDEA (Recommended IDE)
+
+🚀 How to Run
+1. Open in IntelliJ
+Clone or unzip the project.
+
+Open the project in IntelliJ IDEA.
+
+2. Adjust Paths
+Modify the input/output paths inside Main.java:
+
+java
+Copy
+Edit
+String inputXMLPath = "your/path/to/inputXML";
+String outputXMLPath = "your/path/to/outputXML";
+3. Run the Application
+Run Main.java.
+
+A continuous loop will watch the inputXMLPath folder for files.
+
+Drop OrderInput.xml or modified variants in /inputXML.
+
+Processed XMLs will appear in /outputXML.
+
+Input files will be automatically deleted after processing.
+
+📝 Input Files
+OrderInput.xml: Base example
+
+OrderInput2.xml, OrderInput3.xml: Variants with changes like order number, supplier
+
+🧠 For better simulation of real-time processing, drop files manually one at a time.
+
+📤 Output Files
+Generated product XML files will reflect the content and structure derived from order data.
+
+📘 References
+See XML Parser problem.pdf for detailed description of the problem statement and expected XML structures.
